@@ -1,13 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoss Home Server</title>
+  <link rel="icon" href="bin/misc/logo.svg">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <img src="./bin/misc/logo.svg" alt="Logo">
-    
+  <header>
+    <img src="bin/misc/logo.svg" alt="Hoss Logo" id="logo">
+    <h1>Welcome to Hoss</h1>
+    <p class="subtitle">Your open source home server</p>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Why Hoss?</h2>
+      <p>
+        Hoss is a lightweight, open source solution for managing your home server. 
+        Designed for simplicity, reliability, and full control over your data.
+      </p>
+    </section>
+    <section class="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Easy setup and configuration</li>
+        <li>Secure file sharing</li>
+        <li>Remote access</li>
+        <li>Customizable modules</li>
+        <li>Active community support</li>
+      </ul>
+    </section>
+    <section class="get-started">
+      <h2>Get Started</h2>
+      <p>
+        Ready to take control? <a href="https://github.com/donnellan0007/hoss" class="cta-link">View on GitHub</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <span>&copy; 2025 Hoss Project</span>
+  </footer>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f6f7fb;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    #logo {
+      height: 60px;
+      vertical-align: middle;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      margin: 0.2em 0 0.1em 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #b3b3b3;
+      margin-bottom: 0.5em;
+    }
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border-radius: 0;
+      padding: 2rem 2.5rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      color: #222;
+      border-left: 4px solid #222;
+      padding-left: 0.5em;
+      font-weight: 600;
+    }
+    ul {
+      list-style: square inside;
+      padding-left: 0;
+      margin: 0.5em 0 0 0;
+    }
+    li {
+      margin-bottom: 0.5em;
+      font-size: 1.08em;
+    }
+    .get-started .cta-link {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7em 1.4em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .get-started .cta-link:hover {
+      background: #444;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1em;
+      letter-spacing: 1px;
+      margin-top: auto;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem 0.5rem;
+      }
+      h1 {
+        font-size: 1.7em;
+      }
+      h2 {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+  <script>
+    // Simple welcome animation
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('header').style.opacity = 0;
+      setTimeout(() => {
+        document.querySelector('header').style.transition = 'opacity 1s';
+        document.querySelector('header').style.opacity = 1;
+      }, 200);
+    });
+  </script>
 </body>
-</html>
